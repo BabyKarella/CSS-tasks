@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #two{
+            height:500px;
+            width:500px;
+            border: 5px solid black;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: wheat;
+            border-radius: 10px;
+            
+        }
+        .parent{
+            height:400px;
+            width:400px;
+            border:10px solid blue;
+            background-color:lightblue;
+            border-radius: 50%;
+            display:flex;
+             flex-direction: row;
+              justify-content: center;
+                 align-items:center;
+        }
+        #one{
+         height:150px;
+         width:150px;
+         border-radius: 50%;
+         border:10px solid green;
+         background-color: rgb(134, 229, 197);
+         text-align: center;
+         text-shadow: 4px 4px 4px blue;
+         display: flex;
+         justify-content: center;
+         flex-direction: row;
+         box-sizing: border-box;
+         padding: 50px;
+         font-family:algerian;
+        
+        }
+        #child{
+            height:250px;
+            width:250px;
+            border-radius: 50%;
+            border:10px solid red;
+            background-color: rgb(239, 165, 177);
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+        }
+            
+        
+    </style>
+</head>
+<body>
+    <div id="two">
+    <div class="parent">
+        <div id="child">
+        <div id="one">Fullstack Developer</div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

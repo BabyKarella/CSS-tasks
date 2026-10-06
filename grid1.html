@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: black;
+            height:250px;
+            width:700px;
+            display: grid;
+            grid-template-columns: repeat(18,20px);
+            grid-template-rows: 10px 80px 80px;
+            margin:20px;
+            padding:30px;
+            gap:20px;
+            box-sizing: border-box;
+
+        }
+        .box1{
+           height:10px;
+           width:10px;
+           background-color: red; 
+           border-radius: 50%;
+        }
+        .box2{
+           height:10px;
+           width:10px;
+           border-radius: 50%;
+           background-color: orange; 
+        }
+         .box3{
+           height:10px;
+           width:10px;
+           border-radius: 50%;
+           background-color: green; 
+        }
+          .box4{
+           background-color: white; 
+           grid-column: 4/18;
+        }
+        .box5{
+            background-color: red;
+            grid-column: 1/6;
+        }
+         .box6{
+            background-color: rgb(202, 83, 14);
+            grid-column: 6/12;
+        }
+         .box7{
+            background-color:rgb(227, 153, 14);
+            grid-column: 12/18;
+        }
+         .box8{
+            background-color: rgb(18, 169, 18);
+            grid-column: 1/6;
+        }
+         .box9{
+            background-color: rgb(107, 227, 107);
+            grid-column: 6/12;
+        }
+         .box10{
+            background-color:rgb(178, 239, 178);
+            grid-column: 12/18;
+        }
+        .parent{
+            background-color: black;
+            height:250px;
+            width:700px;
+            display: grid;
+            grid-template-columns: repeat(18,20px);
+            grid-template-rows: 10px 80px 80px;
+            margin:20px;
+            padding:30px;
+            gap:20px;
+            box-sizing: border-box;
+
+        }
+        .child1{
+           height:10px;
+           width:10px;
+           background-color: red; 
+           border-radius: 50%;
+        }
+        .child2{
+           height:10px;
+           width:10px;
+           border-radius: 50%;
+           background-color: orange; 
+        }
+         .child3{
+           height:10px;
+           width:10px;
+           border-radius: 50%;
+           background-color: green; 
+        }
+          .child4{
+           background-color: white; 
+           grid-column: 4/18;
+        }
+         .child5{
+            background-color: red;
+            grid-column: 1/12;
+        }
+         .child6{
+            background-color:rgb(17, 203, 17);
+            grid-column:1/6;
+        }
+         .child7{
+            background-color:rgb(152, 214, 59);
+            grid-column: 6/12;
+        }
+         .child8{
+            background-color: orange;
+            grid-column: 12/18;
+            grid-row:2/4 ;
+        }
+        .baby{
+            background-color: black;
+            height:350px;
+            width:700px;
+            display: grid;
+            grid-template-columns: repeat(18,20px);
+            grid-template-rows: 10px 80px 80px 80px;
+            margin:20px;
+            padding:30px;
+            gap:20px;
+            box-sizing: border-box;
+        }
+         .baby1{
+           height:10px;
+           width:10px;
+           background-color: red; 
+           border-radius: 50%;
+        }
+        .baby2{
+           height:10px;
+           width:10px;
+           border-radius: 50%;
+           background-color: orange; 
+        }
+         .baby3{
+           height:10px;
+           width:10px;
+           border-radius: 50%;
+           background-color: green; 
+        }
+          .baby4{
+           background-color: white; 
+           grid-column: 4/18;
+        }
+        .baby5{
+            background-color: orange;
+            grid-column: 1/18;
+        }
+        .baby6{
+            background-color: rgb(87, 142, 6);
+            grid-column: 1/5;
+        }
+        .baby7{
+            background-color: red;
+            grid-column: 5/18;
+        }
+        .baby8{
+            background-color: rgb(15, 98, 15);
+            grid-column: 1/18;
+        }
+         .mom{
+            background-color: black;
+            height:330px;
+            width:700px;
+            display: grid;
+            grid-template-columns: repeat(18,20px);
+            grid-template-rows: 10px 80px 80px 50px;
+            margin:20px;
+            padding:30px;
+            gap:20px;
+            box-sizing: border-box;
+        }
+        .mom1{
+           height:10px;
+           width:10px;
+           background-color: red; 
+           border-radius: 50%;
+        }
+        .mom2{
+           height:10px;
+           width:10px;
+           border-radius: 50%;
+           background-color: orange; 
+        }
+         .mom3{
+           height:10px;
+           width:10px;
+           border-radius: 50%;
+           background-color: green; 
+        }
+          .mom4{
+           background-color: white; 
+           grid-column: 4/18;
+        }
+        .mom5{
+            background-color: orange;
+            grid-column: 1/9;
+        }
+        .mom6{
+            background-color: red;
+            grid-column: 9/18;
+        }
+        .mom7{
+            background-color:green;
+            grid-column: 1/6;
+        }
+        .mom8{
+            background-color: rgb(165, 247, 24);
+            grid-column: 6/18;
+        }
+        .mom9{
+            background-color: rgb(237, 174, 57);
+            grid-column: 1/18;
+        }
+        .dad{
+            background-color: black;
+            height:400px;
+            width:750px;
+            display: grid;
+            grid-template-columns: repeat(19,20px);
+            grid-template-rows: 10px 80px 80px 80px;
+            margin:20px;
+            padding:30px;
+            gap:20px;
+            box-sizing: border-box;
+        }
+        .dad1{
+           height:10px;
+           width:10px;
+           background-color: red; 
+           border-radius: 50%;
+        }
+        .dad2{
+           height:10px;
+           width:10px;
+           border-radius: 50%;
+           background-color: orange; 
+        }
+         .dad3{
+           height:10px;
+           width:10px;
+           border-radius: 50%;
+           background-color: green; 
+        }
+          .dad4{
+           background-color: white; 
+           grid-column: 4/19;
+        }
+        .dad5{
+            background-color: green;
+            grid-column: 1/4;
+        }
+        .dad6{
+            background-color: rgb(223, 42, 42);
+            grid-column: 4/7;
+        }
+        .dad7{
+            background-color: rgb(229, 157, 25);
+            grid-column: 7/10;
+        }
+        .dad8{
+            background-color: green;
+            grid-column: 10/13;
+        }
+        .dad9{
+            background-color: rgb(195, 59, 59);
+            grid-column: 13/16;
+        }
+         .dad10{
+            background-color: rgb(222, 92, 45);
+            grid-column: 16/19;
+        }
+        .dad11{
+            background-color: red;
+            grid-column: 1/4;
+        }
+        .dad12{
+            background-color: green;
+            grid-column: 4/7;
+        }
+        .dad13{
+            background-color: orangered;
+            grid-column: 7/10;
+        }
+        .dad14{
+            background-color: yellowgreen;
+            grid-column: 10/13;
+        }
+        .dad15{
+            background-color: orange;
+            grid-column: 13/16;
+        }
+         .dad16{
+            background-color: green;
+            grid-column: 16/19;
+        }
+        .dad17{
+            background-color: red;
+            grid-column: 1/4;
+        }
+        .dad18{
+            background-color: orange;
+            grid-column: 4/7;
+        }
+        .dad19{
+            background-color: yellowgreen;
+            grid-column: 7/10;
+        }
+        .dad20{
+            background-color: orangered;
+            grid-column: 10/13;
+        }
+        .dad21{
+            background-color: green;
+            grid-column: 13/16;
+        }
+         .dad22{
+            background-color: gold;
+            grid-column: 16/19;
+        }
+        .bro{
+            background-color: black;
+            height:400px;
+            width:700px;
+            display: grid;
+            grid-template-columns: repeat(19,20px);
+            grid-template-rows: 10px 40px 50px 50px 50px 50px;
+            margin:20px;
+            padding:30px;
+            gap:20px;
+            box-sizing: border-box;
+        }
+        .bro1{
+           height:10px;
+           width:10px;
+           background-color: red; 
+           border-radius: 50%;
+        }
+        .bro2{
+           height:10px;
+           width:10px;
+           border-radius: 50%;
+           background-color: orange; 
+        }
+         .bro3{
+           height:10px;
+           width:10px;
+           border-radius: 50%;
+           background-color: green; 
+        }
+          .bro4{
+           background-color: white; 
+           grid-column: 4/18;
+        }
+        .bro5{
+            background-color: red;
+            grid-column: 1/10;
+        }
+        .bro6{
+            background-color: green;
+            grid-column: 10/14;
+        }
+        .bro7{
+            background-color: orange;
+            grid-column: 14/18;
+        }
+        .bro8{
+            background-color: orange;
+            grid-column: 1/5;
+            
+        }
+        .bro9{
+            background-color: green;
+            grid-column: 5/10;
+        }
+        .bro10{
+            background-color: rgb(58, 240, 58);
+            grid-column: 10/14;
+        }
+        .bro11{
+            background-color: rgba(36, 37, 36, 0.818);
+            grid-column: 14/18;
+        }
+        .bro12{
+            background-color: rgb(228, 170, 63);
+            grid-column: 1/10;
+            grid-row: 4/6;
+        }
+         .bro13{
+            background-color:rgb(10, 91, 10);
+            grid-column: 10/14;
+        }
+        .bro14{
+            background-color:rgb(230, 24, 24);
+            grid-column: 14/18;
+        }
+        .bro15{
+            background-color:rgb(26, 211, 26);
+            grid-column: 10/14;
+        }
+        .bro16{
+            background-color: rgba(36, 37, 36, 0.818);
+            grid-column: 14/18;
+        }
+        .bro17{
+            background-color:greenyellow;
+            grid-column: 1/14;
+        }
+        .bro18{
+            background-color:orangered;
+            grid-column: 14/18;
+        }
+        .son{
+            background-color: black;
+            height:350px;
+            width:700px;
+            display: grid;
+            grid-template-columns: repeat(18,20px);
+            grid-template-rows: 20px 50px 200px;
+            margin:20px;
+            padding:30px;
+            gap:20px;
+            box-sizing: border-box;
+        }
+        .son1{
+           height:10px;
+           width:10px;
+           background-color: red; 
+           border-radius: 50%;
+        }
+        .son2{
+           height:10px;
+           width:10px;
+           border-radius: 50%;
+           background-color: orange; 
+        }
+         .son3{
+           height:10px;
+           width:10px;
+           border-radius: 50%;
+           background-color: green; 
+        }
+          .son4{
+           background-color: white; 
+           grid-column: 4/18;
+        }
+        .son5{
+            background-color: orange;
+            grid-column: 1/9;
+        }
+        .son6{
+            background-color: rgb(34, 229, 34);
+            grid-column: 9/18;
+        }
+        .son7{
+            background-color: red;
+            grid-column: 1/9;
+        }
+         .son8{
+            background-color: rgb(150, 227, 150);
+            grid-column: 9/18;
+             display: grid;
+            grid-template-columns: repeat(5,60px);
+             grid-template-rows: 30px 80px;
+             box-sizing: border-box;
+             gap: 10px;
+            padding:20px;
+        }
+        .class1{
+            background-color: rgb(8, 73, 8);
+            grid-column: 1/5;
+        }
+        .class2{
+            background-color: rgb(8, 73, 8);
+            grid-column: 1/3;
+        }
+        .class3{
+            background-color: orangered;
+            grid-column: 3/5;
+        }
+         .baby116{
+            background-color: black;
+            height:400px;
+            width:650px;
+            display: grid;
+            grid-template-columns: repeat(20,20px);
+            grid-template-rows: 10px 100px 100px 70px;
+            margin:20px;
+            padding:30px;
+            gap:20px;
+            box-sizing: border-box;
+        }
+        .baby11{
+           height:10px;
+           width:10px;
+           background-color: red; 
+           border-radius: 50%;
+        }
+        .baby22{
+           height:10px;
+           width:10px;
+           border-radius: 50%;
+           background-color: orange; 
+        }
+         .baby33{
+           height:10px;
+           width:10px;
+           border-radius: 50%;
+           background-color: green; 
+        }
+          .baby44{
+           background-color: white; 
+           grid-column: 4/17;
+        }
+        .baby55{
+            grid-column: 1/4;
+            background-color: red;
+        }
+         .baby66{
+            grid-column: 4/7;
+            background-color: orange;
+        }
+         .baby77{
+            grid-column: 7/10;
+            background-color: rgb(30, 232, 30);
+        }
+         .baby88{
+            grid-column: 10/13;
+            background-color: rgb(13, 132, 13);
+        }
+        .baby99{
+            grid-column: 13/16;
+            background-color: rgb(83, 211, 83);
+        }
+         .baby00{
+            grid-column: 1/4;
+            background-color: orange;
+        }
+          .baby01{
+            grid-column: 4/7;
+            background-color: rgb(230, 35, 17);
+        }
+         .baby02{
+            grid-column: 7/16;
+            background-color:orangered;
+        }
+         .baby03{
+            grid-column: 1/16;
+            background-color:rgb(155, 210, 72);
+        }
+        .baby1166{
+            background-color: black;
+            height:300px;
+            width:650px;
+            display: grid;
+            grid-template-columns: repeat(20,20px);
+            grid-template-rows: 10px 50px 50px 70px;
+            margin:20px;
+            padding:30px;
+            gap:20px;
+            box-sizing: border-box;
+        }
+        
+        .baby111{
+           height:10px;
+           width:10px;
+           background-color: red; 
+           border-radius: 50%;
+        }
+        .baby222{
+           height:10px;
+           width:10px;
+           border-radius: 50%;
+           background-color: orange; 
+        }
+         .baby333{
+           height:10px;
+           width:10px;
+           border-radius: 50%;
+           background-color: green; 
+        }
+          .baby444{
+           background-color: white; 
+           grid-column: 4/17;
+          }
+          .baby555{
+            background-color: orange;
+            grid-column: 1/16;
+          }
+          .baby666{
+            background-color: rgb(11, 143, 11);
+            grid-column: 1/6;
+            grid-row: 3/5;
+          }
+          .baby777{
+            background-color: rgb(94, 242, 94);
+            grid-column: 6/16;
+          }
+          .baby888{
+            background-color: red;
+            grid-column: 6/11
+          }
+          .baby999{
+            background-color: orangered;
+            grid-column: 11/16;
+          }
+        
+        
+    
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+        <div class="box box6"></div>
+        <div class="box box7"></div>
+        <div class="box box8"></div>
+        <div class="box box9"></div>
+        <div class="box box10"></div>
+    </div>
+    <br>
+    <br>
+    <div class="parent">
+        <div class="child child1"></div>
+        <div class="child child2"></div>
+        <div class="child child3"></div>
+        <div class="child child4"></div>
+        <div class="child child5"></div>
+        <div class="child child6"></div>
+        <div class="child child7"></div>
+        <div class="child child8"></div>
+    </div>
+    <br>
+    <br>
+     <div class="baby">
+        <div class="child baby1"></div>
+        <div class="child baby2"></div>
+        <div class="child baby3"></div>
+        <div class="child baby4"></div>
+        <div class="child baby5"></div>
+        <div class="child baby6"></div>
+        <div class="child baby7"></div>
+        <div class="child baby8"></div>
+    </div>
+    <br>
+    <br>
+    <div class="mom">
+        <div class="child mom1"></div>
+        <div class="child mom2"></div>
+        <div class="child mom3"></div>
+        <div class="child mom4"></div>
+        <div class="child mom5"></div>
+        <div class="child mom6"></div>
+        <div class="child mom7"></div>
+        <div class="child mom8"></div>
+        <div class="child mom9"></div>
+    </div>
+    <div class="dad">
+        <div class="child dad1"></div>
+        <div class="child dad2"></div>
+        <div class="child dad3"></div>
+        <div class="child dad4"></div>
+        <div class="child dad5"></div>
+        <div class="child dad6"></div>
+        <div class="child dad7"></div>
+        <div class="child dad8"></div>
+        <div class="child dad9"></div>
+        <div class="child dad10"></div>
+        <div class="child dad11"></div>
+        <div class="child dad12"></div>
+        <div class="child dad13"></div>
+        <div class="child dad14"></div>
+        <div class="child dad15"></div>
+        <div class="child dad16"></div>
+        <div class="child dad17"></div>
+        <div class="child dad18"></div>
+        <div class="child dad19"></div>
+        <div class="child dad20"></div>
+        <div class="child dad21"></div>
+         <div class="child dad22"></div>
+    </div>
+     <div class="bro">
+        <div class="child bro1"></div>
+        <div class="child bro2"></div>
+        <div class="child bro3"></div>
+        <div class="child bro4"></div>
+        <div class="child bro5"></div>
+        <div class="child bro6"></div>
+        <div class="child bro7"></div>
+        <div class="child bro8"></div>
+        <div class="child bro9"></div>
+        <div class="child bro10"></div>
+        <div class="child bro11"></div>
+        <div class="child bro12"></div>
+        <div class="child bro13"></div>
+        <div class="child bro14"></div>
+        <div class="child bro15"></div>
+        <div class="child bro16"></div>
+        <div class="child bro17"></div>
+        <div class="child bro18"></div>
+    </div>
+    <div class="son">
+        <div class="child son1"></div>
+        <div class="child son2"></div>
+        <div class="child son3"></div>
+        <div class="child son4"></div>
+        <div class="child son5"></div>
+        <div class="child son6"></div>
+        <div class="child son7"></div>
+        <div class="child son8">
+                    <div class="class1"></div>
+                    <div class="class2"></div>
+                    <div class="class3"></div>
+        </div>
+    </div>
+     <div class="baby116">
+        <div class="child baby11"></div>
+        <div class="child baby22"></div>
+        <div class="child baby33"></div>
+        <div class="child baby44"></div>
+        <div class="child baby55"></div>
+        <div class="child baby66"></div>
+        <div class="child baby77"></div>
+        <div class="child baby88"></div>
+        <div class="child baby99"></div>
+        <div class="child baby00"></div>
+         <div class="child baby01"></div>
+          <div class="child baby02"></div>
+          <div class="child baby03"></div>
+    </div>
+     <div class="baby1166">
+        <div class="child baby111"></div>
+        <div class="child baby222"></div>
+        <div class="child baby333"></div>
+        <div class="child baby444"></div>
+        <div class="child baby555"></div>
+        <div class="child baby666"></div>
+        <div class="child baby777"></div>
+        <div class="child baby888"></div>
+        <div class="child baby999"></div>
+        <div class="child baby000"></div>
+         <div class="child baby010"></div>
+          <div class="child baby020"></div>
+          <div class="child baby030"></div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(115, 48, 178);
+        }
+        .parent{
+            height: 200px;
+            width: 200px;
+            perspective: 800px;
+        }
+        .container{
+            height: 300px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transform-style:preserve-3d;
+            animation: cube 10s linear 2s infinite alternate;
+        }
+        .box{
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            font-size: 30px;
+            font-weight: 700;
+            color: white;
+            border:3px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box1{
+            background-color: rgb(225, 21, 140);
+            transform:translateZ(100px);
+        }
+        .box2{
+            background-color: blue;
+            transform: rotateY(180deg) translateZ(100px);
+        }
+         .box3{
+            background-color: rgb(222, 91, 15);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+         .box4{
+            background-color:yellow;
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+         .box5{
+            background-color:green;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .box6{
+            background-color: red;
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        @keyframes cube{
+            0%{
+                transform:rotatex(0)rotatey(0);
+            }
+            25%{
+                transform: rotatex(90deg)rotatey(90deg);
+            }
+            50%{
+                  transform: rotatex(180deg)rotatey(180deg);
+            }
+            75%{
+                  transform: rotatex(270deg)rotatey(270deg);
+            }
+            100%{
+                  transform: rotatex(360deg)rotatey(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="container">
+        <div class="box box1">Front</div>
+        <div class="box box2">Back</div>
+        <div class="box box3">Left</div>
+        <div class="box box4">Right</div>
+        <div class="box box5">Top</div>
+        <div class="box box6">Bottom</div>
+    </div>
+    </div>
+</body>
+</html>
